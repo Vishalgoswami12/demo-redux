@@ -22,8 +22,12 @@ function Todos(props) {
                 <input type="text" placeholder="Add todo..." onInput={(e) => setTodoInput(e.target.value)}/>
             </form>
             {
-                props.todos && props.todos.map((item, index) => (
-                    <Todo todo={item} index={index} handleDelete={handleDelete}/>
+                props.todos && 
+                props.todos.map((item, index) => (
+                    <Todo 
+                    todo={item} 
+                    index={index} 
+                    handleDelete={handleDelete}/>
                 ))
             }
         </div>
